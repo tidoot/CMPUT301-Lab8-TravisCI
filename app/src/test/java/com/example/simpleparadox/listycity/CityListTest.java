@@ -40,7 +40,7 @@ class CityListTest {
         cityList.add(new City("Regina", "Saskatchewan"));
 
         assertEquals(2, cityList.countCities());
-        assertTrue(cityList.hasCity(new City("Regina", "Saskatchewan")));
+        assertTrue(cityList.hasCity(new City("Regina", "Saskatchewan")));}
 
     @Test
     void testAddException() {
@@ -49,9 +49,7 @@ class CityListTest {
         City city = new City("Yellowknife", "Northwest Territories");
         cityList.add(city);
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            cityList.add(city);
-        });
+        assertThrows(IllegalArgumentException.class, () -> cityList.add(city));
     }
 
     @Test
@@ -95,9 +93,7 @@ class CityListTest {
 
         cityList.delete(mockCity());
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            cityList.delete(mockCity());
-        });
+        assertThrows(IllegalArgumentException.class, () -> cityList.delete(mockCity()));
     }
 
     @Test
